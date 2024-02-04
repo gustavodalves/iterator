@@ -1,4 +1,4 @@
-import { DefaultIterator } from "../data-structures/iterator";
+import { Collection, DefaultIterator } from "../data-structures/iterator";
 import { Video } from "./video";
 import { Videos } from "./videos";
 
@@ -7,7 +7,7 @@ export class Channel {
         readonly name: string
     ) {}
 
-    videos: DefaultIterator<Video> = new Videos()
+    videos: DefaultIterator<Video> & Collection<Video> = new Videos()
 
     uploadNewVideo(
         title: string,

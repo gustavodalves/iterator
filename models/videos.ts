@@ -1,8 +1,8 @@
-import { DefaultIterator } from "../data-structures/iterator";
+import { Collection, DefaultIterator } from "../data-structures/iterator";
 import { Queue } from "../data-structures/queue";
 import { Video } from "./video";
 
-export class Videos implements DefaultIterator<Video> {
+export class Videos implements DefaultIterator<Video>, Collection<Video> {
     readonly data: Queue<Video> = new Queue();
 
     hasNext(): boolean {
